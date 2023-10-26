@@ -1,0 +1,1 @@
+export type IsCollegeT = 'yes' | 'no' | null;
