@@ -6,7 +6,7 @@ export const OrderedTicket_Wrapper = styled.div<{$isSingleTicket?: boolean}>`
 	background-color: #fff;
 	box-shadow: 0px 20px 40px -4px ${(props) => props.theme.light.colors.shadow.main};
 	max-width: ${(props) => props.$isSingleTicket ? '872px' : '800px'};
-	margin: 0 auto ${(props) => props.$isSingleTicket ? '0' : '16px'};
+	margin: 0 auto ${(props) => props.$isSingleTicket ? '16px' : '24px'};
 	padding: 24px;
 	display: flex;
 	justify-content: space-between;
