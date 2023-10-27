@@ -164,7 +164,7 @@ export const Payment = () => {
 					</Payment__Inner>
 				</Payment__Main>
 				<Payment__Aside>
-					<ButtonStyled variant='contained' color='primary' sx={{ width: '339px', margin: '0 auto 25px' }}>
+					<ButtonStyled variant='contained' color='primary' sx={{ width: '339px', margin: '0 auto 30px' }}>
 						Place order
 					</ButtonStyled>
 					<Payment__OrderSummaryWrapper>

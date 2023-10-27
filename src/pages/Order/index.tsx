@@ -1,6 +1,6 @@
 import { EventCard } from '~components/EventCard';
 import { BackToTicketBtn, ContainerStyled } from '~styles/shared';
-import { Order__Footer, Order__Wrapper } from './styled';
+import { Order__Footer, Order__TitleName, Order__Wrapper } from './styled';
 import { v4 as uuidv4 } from 'uuid';
 import { Link, useNavigate } from 'react-router-dom';
 import { OrderedTicket } from '~components/OrderedTicket';
@@ -23,6 +23,7 @@ export const Order = () => {
 		<ContainerStyled>
 			<EventCard />
 			<Order__Wrapper>
+				<Order__TitleName>John Smith</Order__TitleName>
 				{orders.map((order) => (
 					<OrderedTicket order={order} key={order.id} />
 				))}

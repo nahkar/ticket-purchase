@@ -18,7 +18,7 @@ export const Ticket = () => {
 		<ContainerStyled>
 			<EventCard />
 			<TicketDescription />
-			<RelatedTickets />
+			<RelatedTickets isSingleTicket/>
 			<Ticket__Wrapper>
 				<Ticket__Footer>
 					<Ticket__FooterTitle>Important information</Ticket__FooterTitle>

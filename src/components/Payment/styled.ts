@@ -5,13 +5,14 @@ export const Payment__Wrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	margin: 0 0 64px 0;
+	margin: 0 0 76px 0;
+	padding: 26px 0 0 0;
 `;
 export const Payment__Main = styled.main`
 	border-radius: 8px;
 	box-shadow: 0px 20px 40px -4px rgba(145, 158, 171, 0.16);
 	width: 722px;
-	padding: 0 10px;
+	padding: 36px 10px 0 0;
 `;
 export const Payment__Inner = styled.main`
 	width: 496px;
@@ -56,7 +57,7 @@ export const Payment__CardholderTitle = styled.p`
 	line-height: 24px;
 	font-weight: 600;
 	color: ${(props) => props.theme.light.colors.button.outlined};
-	margin: 0 0 26px;
+	margin: 0 0 24px;
 `;
 export const Payment__CardholderCheckedWrapper = styled.div<ThemeT>`
 	position: absolute;
@@ -90,12 +91,12 @@ export const Payment__OrderSummaryWrapper = styled.div`
 	background-color: #fff;
 	box-shadow: 0px 20px 40px -4px rgba(145, 158, 171, 0.16);
 	padding: 0 16px;
-	margin: 0 0 16px;
+	margin: 22px 4px 26px 0;
 `;
 export const Payment__OrderAsideRow = styled.div`
 	display: flex;
 	justify-content: space-between;
-	margin: 0 0 17px;
+	margin: 0 0 11px;
 `;
 export const Payment__OrderAsideTitle = styled.p`
 	line-height: 24px;
@@ -107,8 +108,12 @@ export const Payment__OrderSummaryEditBtn = styled.button<ThemeT>`
 	background: none;
 	cursor: pointer;
 	display: flex;
+	margin: 4px 5px 0 0;
 	font-size: 13px;
 	color: ${(props) => props.theme.light.colors.primary.blue};
+	img{
+		padding: 0 10px 0;
+	}
 `;
 export const Payment__OrderSummaryList = styled.ul`
 	list-style: none;
@@ -116,11 +121,11 @@ export const Payment__OrderSummaryList = styled.ul`
 export const Payment__OrderSummaryItem = styled.li`
 	display: flex;
 	justify-content: space-between;
-	padding: 17px 0;
-	border-top: 0.5px solid #919eab;
-	&:first-child {
-		border: none;
-		padding-top: 0;
+	padding: 5px 0;
+	margin: 0 0 14px;
+	border-bottom: 0.5px solid #919eab;
+	&:last-child {
+		border: none
 	}
 `;
 export const Payment__OrderSummaryName = styled.span`
@@ -138,7 +143,7 @@ export const Payment__OrderTotalWrapper = styled.div<ThemeT>`
 	border-radius: 8px;
 	background-color: #fff;
 	box-shadow: 0px 20px 40px -4px ${(props) => props.theme.light.colors.shadow.main};
-	padding: 16px;
+	padding: 16px 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

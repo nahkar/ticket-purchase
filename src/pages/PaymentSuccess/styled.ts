@@ -22,6 +22,8 @@ export const PaymentSuccess__SubDescription = styled.p`
 	margin: 0 0 16px;
 `;
 export const PaymentSuccess__Footer = styled.footer<ThemeT>`
+	max-width: 800px;
+	margin: 0 auto;
 	p {
 		line-height: 24px;
 	}

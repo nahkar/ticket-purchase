@@ -23,8 +23,8 @@ export const FormBorderBox__ClearBtn = styled.button<ThemeT>`
 	background: #fff;
 	padding: 0 5px;
 	position: absolute;
-	right: 20px;
-	top: -10px;
+	right: 21px;
+	top: -8px;
 	font-size: 14px;
 	color: #3366ff;
 	cursor: pointer;

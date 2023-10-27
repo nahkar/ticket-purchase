@@ -6,11 +6,12 @@ type PropsT = {
 	label: string;
 	onClear?: () => void;
 	onDelete?: () => void;
+	isLastSpectator: boolean;
 };
 
-export const Spectator = ({ children, label, onClear, onDelete }: PropsT) => {
+export const Spectator = ({ children, label, onClear, onDelete, isLastSpectator }: PropsT) => {
 	return (
-		<Spectator__Wrapper>
+		<Spectator__Wrapper $isLastSpectator={isLastSpectator}>
 			<FormBorderBox label={label} onClear={onClear}>
 				{children}
 			</FormBorderBox>

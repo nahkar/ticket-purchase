@@ -18,21 +18,21 @@ export const AdmissionInformation__Title = styled(Box)`
 	color: ${(props) => props.theme.light.colors.text.primary};
 `;
 export const AdmissionInformation__DescriptionWrapper = styled(Box)`
-	margin-bottom: 54px;
+	margin-bottom: 57px;
 	p {
-		/* letter-spacing: -1px;
-		word-spacing: 0.3px; */
-		line-height: 22px;
+		line-height: 23px;
+		&:first-child{
+			margin: 0 0 3px;
+		}
+		&:last-child {
+		}
 	}
 	ul {
-		padding: 0 0 0 20px;
+		padding: 0 0 0 25px;
+		margin: 0 0 5px;
 	}
 	li {
-		/* letter-spacing: -1px;
-		word-spacing: 0.3px; */
 		line-height: 22px;
-		&:last-child {
-			margin: 0;
-		}
+		margin: 0 0 2px;
 	}
 `;

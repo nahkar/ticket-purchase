@@ -7,7 +7,7 @@ export const Header__Wrapper = styled.header<ThemeT>`
 	height: 88px;
 	padding: 0 64px;
 	background: #fff;
-	margin-bottom: 64px;
+	margin-bottom: 40px;
 	box-shadow: 0px 8px 16px  ${(props) => props.theme.light.colors.shadow.main};
 `;
 export const Header__Logo = styled.img`

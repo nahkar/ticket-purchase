@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { ThemeT } from '~styles/theme';
 
-export const OrderedTicket_Wrapper = styled.div<ThemeT>`
+export const OrderedTicket_Wrapper = styled.div<{$isSingleTicket?: boolean}>`
 	border-radius: 8px;
 	background-color: #fff;
-	margin: 0 0 16px;
 	box-shadow: 0px 20px 40px -4px ${(props) => props.theme.light.colors.shadow.main};
-	width: 100%;
+	max-width: ${(props) => props.$isSingleTicket ? '872px' : '800px'};
+	margin: 0 auto ${(props) => props.$isSingleTicket ? '0' : '16px'};
 	padding: 24px;
 	display: flex;
 	justify-content: space-between;

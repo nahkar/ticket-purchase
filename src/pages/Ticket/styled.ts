@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Ticket__Wrapper = styled.div`
-	padding: 73px 0 0;
+	padding: 70px 0 0;
 `;
 export const Ticket__Footer = styled.footer`
 	button {

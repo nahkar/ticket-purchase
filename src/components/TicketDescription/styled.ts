@@ -42,6 +42,7 @@ export const TicketDescription__DescribeTitle = styled.h2<ThemeT>`
 	justify-content: space-between;
 	font-size: 24px;
 	line-height: 36px;
+	font-weight: 600;
 	color: ${(props) => props.theme.light.colors.primary.blue};
 	margin: 0 0 16px;
 `;

@@ -4,7 +4,7 @@ import { ThemeT } from '~styles/theme';
 
 export const TeamCode__Wrapper = styled(Box)`
 	max-width: 400px;
-	margin: 0 auto 105px;
+	margin: 0 auto 108px;
 `;
 
 export const TeamCode__Title = styled.h6<ThemeT>`

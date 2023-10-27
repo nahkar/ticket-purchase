@@ -31,7 +31,7 @@ export const ButtonWrapper = styled(Box)`
 	${ButtonStyled} {
 		margin: 0 24px 0 0 !important;
 		&:last-child {
-			margin: 0 !important;
+			margin: 0 23px 0 0px!important
 		}
 	}
 `;
@@ -57,7 +57,7 @@ export const AddNewSpectatorBtn = styled.button<ThemeT>`
 	border: none;
 	cursor: pointer;
 	font-size: 13px;
-	line-height: 22px;
+	padding: 0 0 0 6px;
 	font-weight: 700;
 	display: flex;
 	align-items: center;

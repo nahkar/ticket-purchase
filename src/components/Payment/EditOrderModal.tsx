@@ -16,7 +16,7 @@ export const EditOrderModal = ({ isShow, onClose }: PropsT) => {
 			aria-describedby='modal-modal-description'
 		>
 			<EditOrderModal__Wrapper>
-				<Step2Form />
+				<Step2Form isModal/>
 				<ButtonStyled variant='contained' color='primary' sx={{ width: '204px', float: 'right' }}>
 					Save
 				</ButtonStyled>

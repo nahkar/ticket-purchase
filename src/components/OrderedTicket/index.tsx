@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom';
 
 type PropsT = {
 	order: OrderT;
+	isSingleTicket?: boolean;
 };
-export const OrderedTicket = ({ order: { id, name, order, customer } }: PropsT) => {
+export const OrderedTicket = ({ isSingleTicket, order: { id, name, order, customer } }: PropsT) => {
 	return (
-		<OrderedTicket_Wrapper>
+		<OrderedTicket_Wrapper $isSingleTicket={isSingleTicket}>
 			<Box sx={{ display: 'flex' }}>
 				<img src={qrIcon} alt='qr code' />
 				<Box sx={{ marginLeft: '16px' }}>
@@ -25,7 +26,7 @@ export const OrderedTicket = ({ order: { id, name, order, customer } }: PropsT) 
 			{customer ? (
 				<Box sx={{ display: 'flex', flexDirection: 'column', textAlign: 'right' }}>
 					<OrderedTicket__Order style={{ fontSize: '16px' }}>{name}</OrderedTicket__Order>
-					<OrderedTicket__Order style={{ fontSize: '16px' }}>{order}</OrderedTicket__Order>
+					<OrderedTicket__Order style={{ fontSize: '14px' }}>{order}</OrderedTicket__Order>
 				</Box>
 			) : (
 				<OrderedTicket__Order>{order}</OrderedTicket__Order>

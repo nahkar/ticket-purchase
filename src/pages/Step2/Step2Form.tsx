@@ -7,7 +7,10 @@ import { v4 as uuidv4 } from 'uuid';
 import { SpectatorT } from '~interfaces/spectator.type';
 import { Step2Form__Wrapper } from './styledForm';
 
-export const Step2Form = () => {
+type PropsT = {
+	isModal?: boolean;
+};
+export const Step2Form = ({ isModal }: PropsT) => {
 	const getNewTickets = () => {
 		return [
 			{
@@ -53,9 +56,10 @@ export const Step2Form = () => {
 	);
 
 	return (
-		<Step2Form__Wrapper>
+		<Step2Form__Wrapper $isModal={isModal}>
 			{spectators.map(({ id, first_name, last_name }, index) => (
 				<Spectator
+					isLastSpectator={spectators.length === index + 1}
 					key={id}
 					label={`Spectator ${index + 1}`}
 					onClear={() => {
@@ -117,7 +121,7 @@ export const Step2Form = () => {
 			))}
 
 			<AddNewSpectatorBtn onClick={onAddSpectator}>
-				<img src={plusIcon} alt='plus' /> Add new
+				<img src={plusIcon} alt='plus' /> Add new Spectator
 			</AddNewSpectatorBtn>
 		</Step2Form__Wrapper>
 	);
