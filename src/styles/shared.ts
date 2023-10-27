@@ -83,6 +83,8 @@ export const BackToTicketBtn = styled(Button)<ThemeT>`
 `;
 export const Modal__Wrapper = styled.div<ThemeT>`
 	width: 994px;
+	max-height: 90vh;
+	overflow-y: scroll;
 	border-radius: 8px;
 	background-color: #fff;
 	box-shadow: 0px 20px 40px -4px ${(props) => props.theme.light.colors.shadow.main};
