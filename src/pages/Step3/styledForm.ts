@@ -5,4 +5,5 @@ margin: 0 0 105px;
 `;
 export const Step3Form__Title = styled.p`
 	margin: 0 0 55px;
+	padding: 0 10px;
 `;

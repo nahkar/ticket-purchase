@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { MainLayout } from '~layouts/MainLayout';
 import { MainWideLayout } from '~layouts/MainWideLayout';
-import { Dashboard } from '~pages/Dashboard';
 import { Order } from '~pages/Order';
 import { Orders } from '~pages/Orders';
 import { PaymentSuccess } from '~pages/PaymentSuccess';
@@ -18,7 +17,7 @@ export const App = () => {
 	return (
 		<Routes>
 			<Route path='/' element={<MainLayout />}>
-				<Route index element={<Dashboard />} />
+				<Route index element={<PurchaseAdmissionInformation />} />
 				<Route path='purchase-admission-information' element={<PurchaseAdmissionInformation />} />
 				<Route path='purchase-code' element={<PurchaseCode />} />
 				<Route path='step-one' element={<Step1 />} />

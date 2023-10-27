@@ -31,6 +31,10 @@ export const List__Main = styled.ul`
 	position: relative;
 	z-index: 999999;
 	& ${List__Item} {
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
 		&:first-child {
 			border-top: 1px solid ${(props) => props.theme.light.colors.form.border};
 		}
@@ -39,4 +43,9 @@ export const List__Main = styled.ul`
 export const List__Wrapper = styled.div<{ $isOpen: boolean }>`
 	position: absolute;
 	z-index: ${({ $isOpen }) => ($isOpen ? 2 : 0)};
+`;
+export const List__TotalValue = styled.div`
+	font-size: 16px;
+	line-height: 24px;
+	color: ${(props) => props.theme.light.colors.primary.blue};
 `;

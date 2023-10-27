@@ -36,3 +36,26 @@ export const AdmissionInformation__DescriptionWrapper = styled(Box)`
 		margin: 0 0 2px;
 	}
 `;
+export const AdmissionInformation__Modal__Wrapper = styled.div`
+	max-width: 806px;
+	margin: auto;
+`;
+export const AdmissionInformation__Modal__Description = styled.p`
+font-size: 14px;
+	line-height: 22px;
+	a{
+		color: ${(props) => props.theme.light.colors.primary.blue};
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+`;
+export const AdmissionInformation__Modal__List = styled.ul`
+	margin: 0 0 55px;
+	padding: 0 0 0 25px;
+`;
+export const AdmissionInformation__Modal__ListItem = styled.li`
+	line-height: 22px;
+	font-size: 14px;
+`;

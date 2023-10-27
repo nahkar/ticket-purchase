@@ -13,7 +13,7 @@ type PropsT = {
 export const Counter = ({ price, count, setSpectators, spectatorId, ticketId }: PropsT) => {
 	return (
 		<Counter__Wrapper>
-			<Counter__Price>${price * (count || 1)}</Counter__Price>
+			<Counter__Price $isEmpty={count === 0}>${price * (count || 1)}</Counter__Price>
 			<Counter__Calc>
 				<Counter__Button
 					onClick={(e) => {

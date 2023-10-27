@@ -1,6 +1,14 @@
 import { SpectatorT } from '~interfaces/spectator.type';
 import { Counter } from '../Counter';
-import { List__Description, List__Item, List__Main, List__SubTitle, List__Title, List__Wrapper } from './styled';
+import {
+	List__Description,
+	List__Item,
+	List__Main,
+	List__SubTitle,
+	List__Title,
+	List__TotalValue,
+	List__Wrapper,
+} from './styled';
 import { motion } from 'framer-motion';
 import { Dispatch, SetStateAction } from 'react';
 import { Overlay } from '~components/Overlay';
@@ -38,8 +46,14 @@ export const List = ({ isOpen, spectator, setSpectators, clickHandler }: PropsT)
 							/>
 						</List__Item>
 					))}
+					<List__Item>
+						<List__Title>Total</List__Title>
+						<List__TotalValue>
+							${spectator.tickets.reduce((acc, ticket) => acc + ticket.price * ticket.count, 0)}
+						</List__TotalValue>
+					</List__Item>
 				</List__Main>
-				{isOpen && <Overlay clickHandler={clickHandler}/>}
+				{isOpen && <Overlay clickHandler={clickHandler} />}
 			</List__Wrapper>
 		</motion.div>
 	);

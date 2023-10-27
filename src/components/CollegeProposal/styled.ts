@@ -1,4 +1,3 @@
-import { FormControlLabel } from '@mui/material';
 import styled from 'styled-components';
 import { ThemeT } from '~styles/theme';
 
@@ -55,19 +54,5 @@ export const CollegeProposal__CollegeContainer = styled.div`
 		font-size: 12px;
 		line-height: 18px;
 		color: ${(props) => props.theme.light.colors.button.outlined};
-	}
-`;
-export const CollegeProposal__Label = styled(FormControlLabel)`
-	span {
-		font-size: 14px;
-		padding-right: 17px;
-	}
-	.Mui-checked {
-		svg {
-			fill: #4066ff;
-		}
-	}
-	svg {
-		fill: #637381;
 	}
 `;

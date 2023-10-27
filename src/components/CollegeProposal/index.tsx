@@ -3,7 +3,6 @@ import {
 	CollegeProposal__Box,
 	CollegeProposal__CollegeContainer,
 	CollegeProposal__Description,
-	CollegeProposal__Label,
 	CollegeProposal__Title,
 	CollegeProposal__Wrapper,
 } from './styled';
@@ -11,6 +10,7 @@ import ncsaLogo from '~assets/ncsa-logo.svg';
 import { Dispatch, SetStateAction } from 'react';
 import { IsCollegeT } from '~interfaces/college.type';
 import { useForm } from 'react-hook-form';
+import { Form__Label } from '~styles/shared';
 
 type Props = {
 	setIsCollege: Dispatch<SetStateAction<IsCollegeT>>;
@@ -31,7 +31,7 @@ export const CollegeProposal = ({ setIsCollege, isCollege }: Props) => {
 			</CollegeProposal__Title>
 			<CollegeProposal__Box>
 				<FormGroup>
-					<CollegeProposal__Label
+					<Form__Label
 						control={
 							<Checkbox
 								{...register('collegeYes')}
@@ -58,7 +58,7 @@ export const CollegeProposal = ({ setIsCollege, isCollege }: Props) => {
 							<li>Receive a FREE recruiting game plan personalized to your abilities, wants and needs</li>
 						</ul>
 					</CollegeProposal__CollegeContainer>
-					<CollegeProposal__Label
+					<Form__Label
 						control={
 							<Checkbox
 								{...register('collegeNo')}

@@ -1,13 +1,26 @@
-import { ButtonStyled } from '~styles/shared';
+import { ButtonStyled, ButtonWrapper, Form__Label, Modal__Wrapper } from '~styles/shared';
+
 import {
 	AdmissionInformation__DescriptionWrapper,
+	AdmissionInformation__Modal__Description,
+	AdmissionInformation__Modal__List,
+	AdmissionInformation__Modal__ListItem,
+	AdmissionInformation__Modal__Wrapper,
 	AdmissionInformation__Title,
 	AdmissionInformation__Wrapper,
 } from './styled';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Checkbox, Modal } from '@mui/material';
+import { useState } from 'react';
 
 export const AdmissionInformation = () => {
+	const [isShow, setIsShow] = useState(false);
+	const [isAgree, setIsAgree] = useState(false);
 	const navigate = useNavigate();
+	const onClose = () => setIsShow(false);
+	const continueHandler = () => {
+		setIsShow(true);
+	};
 	return (
 		<AdmissionInformation__Wrapper>
 			<AdmissionInformation__Title>IMPORTANT Admission Information:</AdmissionInformation__Title>
@@ -34,9 +47,56 @@ export const AdmissionInformation = () => {
 					COVID-19.
 				</p>
 			</AdmissionInformation__DescriptionWrapper>
-			<ButtonStyled onClick={() => navigate('/purchase-code')} variant='contained' color='primary'>
+			<ButtonStyled onClick={continueHandler} variant='contained' color='primary'>
 				Continue
 			</ButtonStyled>
+			<Modal
+				open={isShow}
+				onClose={onClose}
+				aria-labelledby='modal-modal-title'
+				aria-describedby='modal-modal-description'
+			>
+				<Modal__Wrapper>
+					<AdmissionInformation__Modal__Wrapper>
+						<AdmissionInformation__Modal__Description>
+							Each pass allows for ONE Spectator to attend the event for the day or days specified. After purchase, you
+							will receive a QR Code ticket by email to the event. Show this QR Code and an id (drivers license, state
+							id, etc) to enter the event. Alternatively, we encourage you to use the{' '}
+							<Link to={'/'}>SportWrench App</Link> to manage your tickets and ID verification.
+						</AdmissionInformation__Modal__Description>
+						<AdmissionInformation__Modal__List>
+							<AdmissionInformation__Modal__ListItem>
+								If you have a ticketing issue, please communicate with the event immediately
+							</AdmissionInformation__Modal__ListItem>
+							<AdmissionInformation__Modal__ListItem>
+								Refunds for unused passes will be issued on request. Refund Policy
+							</AdmissionInformation__Modal__ListItem>
+							<AdmissionInformation__Modal__ListItem>
+								If you dispute a charge, you will incur a $20 fee and will be banned from all future events until this
+								fee is paid. Dispute Policy
+							</AdmissionInformation__Modal__ListItem>
+						</AdmissionInformation__Modal__List>
+						<Form__Label
+							style={{ paddingLeft: '16px', marginBottom: '58px' }}
+							control={<Checkbox onChange={() => setIsAgree(!isAgree)} />}
+							label='I agree to the Refund and Dispute Policy'
+						/>
+						<ButtonWrapper>
+							<ButtonStyled onClick={onClose} variant='outlined'>
+								Close
+							</ButtonStyled>
+							<ButtonStyled
+								variant='contained'
+								color='primary'
+								onClick={() => navigate('/purchase-code')}
+								disabled={!isAgree}
+							>
+								Continue
+							</ButtonStyled>
+						</ButtonWrapper>
+					</AdmissionInformation__Modal__Wrapper>
+				</Modal__Wrapper>
+			</Modal>
 		</AdmissionInformation__Wrapper>
 	);
 };

@@ -1,7 +1,6 @@
 import { Modal } from '@mui/material';
-import { EditOrderModal__Wrapper } from './modal.styled';
 import { Step2Form } from '~pages/Step2/Step2Form';
-import { ButtonStyled } from '~styles/shared';
+import { ButtonStyled, Modal__Wrapper } from '~styles/shared';
 
 type PropsT = {
 	isShow: boolean;
@@ -15,12 +14,12 @@ export const EditOrderModal = ({ isShow, onClose }: PropsT) => {
 			aria-labelledby='modal-modal-title'
 			aria-describedby='modal-modal-description'
 		>
-			<EditOrderModal__Wrapper>
+			<Modal__Wrapper>
 				<Step2Form isModal/>
 				<ButtonStyled variant='contained' color='primary' sx={{ width: '204px', float: 'right' }}>
 					Save
 				</ButtonStyled>
-			</EditOrderModal__Wrapper>
+			</Modal__Wrapper>
 		</Modal>
 	);
 };

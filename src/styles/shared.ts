@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { Box, Button, TextField } from '@mui/material';
+import { Box, Button, FormControlLabel, TextField } from '@mui/material';
 import { ThemeT } from './theme';
 
 export const ContainerStyled = styled.div`
@@ -80,4 +80,29 @@ export const BackToTicketBtn = styled(Button)<ThemeT>`
 	color: ${(props) => props.theme.light.colors.primary.blue} !important;
 	min-width: 432px !important;
 	text-transform: none !important;
+`;
+export const Modal__Wrapper = styled.div<ThemeT>`
+	width: 994px;
+	border-radius: 8px;
+	background-color: #fff;
+	box-shadow: 0px 20px 40px -4px ${(props) => props.theme.light.colors.shadow.main};
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: fixed;
+	padding: 84px 60px;
+`;
+export const Form__Label = styled(FormControlLabel)`
+	span {
+		font-size: 14px;
+		padding-right: 17px;
+	}
+	.Mui-checked {
+		svg {
+			fill: #4066ff;
+		}
+	}
+	svg {
+		fill: #637381;
+	}
 `;

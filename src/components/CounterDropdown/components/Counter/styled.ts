@@ -5,10 +5,10 @@ export const Counter__Wrapper = styled.div`
 	display: flex;
 	align-items: center;
 `;
-export const Counter__Price = styled.div<ThemeT>`
+export const Counter__Price = styled.div<{$isEmpty: boolean}>`
 	font-size: 12px;
 	line-height: 18px;
-	color: ${(props) => props.theme.light.colors.text.primary};
+	color: ${(props) => props.$isEmpty ? '#637381' : props.theme.light.colors.text.primary};
 `;
 export const Counter__Button = styled.button<ThemeT>`
 	border: none;
