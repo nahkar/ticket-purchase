@@ -8,14 +8,9 @@ type PropsT = {
 };
 export const EditOrderModal = ({ isShow, onClose }: PropsT) => {
 	return (
-		<Modal
-			open={isShow}
-			onClose={onClose}
-			aria-labelledby='modal-modal-title'
-			aria-describedby='modal-modal-description'
-		>
+		<Modal open={isShow} onClose={onClose}>
 			<Modal__Wrapper>
-				<Step2Form isModal/>
+				<Step2Form isModal />
 				<ButtonStyled variant='contained' color='primary' sx={{ width: '204px', float: 'right' }}>
 					Save
 				</ButtonStyled>
