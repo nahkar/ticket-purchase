@@ -11,6 +11,7 @@ import { Dispatch, SetStateAction } from 'react';
 import { IsCollegeT } from '~interfaces/college.type';
 import { useForm } from 'react-hook-form';
 import { Form__Label } from '~styles/shared';
+import { CollegeProposalForm } from './CollegeProposalForm';
 
 type Props = {
 	setIsCollege: Dispatch<SetStateAction<IsCollegeT>>;
@@ -23,6 +24,7 @@ type Inputs = {
 
 export const CollegeProposal = ({ setIsCollege, isCollege }: Props) => {
 	const { register } = useForm<Inputs>();
+console.log(isCollege);
 
 	return (
 		<CollegeProposal__Wrapper>
@@ -58,6 +60,7 @@ export const CollegeProposal = ({ setIsCollege, isCollege }: Props) => {
 							<li>Receive a FREE recruiting game plan personalized to your abilities, wants and needs</li>
 						</ul>
 					</CollegeProposal__CollegeContainer>
+					{isCollege === 'yes' && <CollegeProposalForm />}
 					<Form__Label
 						control={
 							<Checkbox

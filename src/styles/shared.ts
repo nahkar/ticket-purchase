@@ -2,8 +2,7 @@ import { styled } from 'styled-components';
 import { Box, Button, FormControlLabel, TextField } from '@mui/material';
 import { ThemeT } from './theme';
 
-export const ContainerStyled = styled.div`
-`;
+export const ContainerStyled = styled.div``;
 
 export const ButtonStyled = styled(Button)<ThemeT>`
 	min-height: 48px;
@@ -15,10 +14,9 @@ export const ButtonStyled = styled(Button)<ThemeT>`
 	background: ${(props) => props.color === 'primary' && props.theme.light.colors.primary.blue} !important;
 	border-radius: 8px !important;
 	color: ${(props) => props.variant === 'outlined' && props.theme.light.colors.button.outlined} !important;
-	border: 1px solid
-		${(props) => (props.variant === 'outlined' ? '#ccc' : 'none')} !important;
+	border: 1px solid ${(props) => (props.variant === 'outlined' ? '#ccc' : 'none')} !important;
 	border: 1px solid ${(props) => (props.variant === 'outlined' ? props.theme.light.colors.form.border : 'none')} !important;
-	&.Mui-disabled{
+	&.Mui-disabled {
 		background-color: rgba(145, 158, 171, 0.24) !important;
 		color: rgba(145, 158, 171, 0.8);
 	}
@@ -31,7 +29,17 @@ export const ButtonWrapper = styled(Box)`
 	${ButtonStyled} {
 		margin: 0 24px 0 0 !important;
 		&:last-child {
-			margin: 0 23px 0 0px!important
+			margin: 0 23px 0 0px !important;
+		}
+	}
+	@media (max-width: 600px) {
+		justify-content: space-between;
+		${ButtonStyled} {
+			margin: 0 !important;
+			min-width: 151px !important;
+			&:last-child {
+				margin: 0px !important;
+			}
 		}
 	}
 `;
@@ -97,7 +105,7 @@ export const Modal__Wrapper = styled.div<ThemeT>`
 export const Form__Label = styled(FormControlLabel)`
 	span {
 		font-size: 14px;
-		padding-right: 17px;
+		margin-right: 17px;
 	}
 	.Mui-checked {
 		svg {
